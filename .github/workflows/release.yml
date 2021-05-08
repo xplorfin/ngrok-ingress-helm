@@ -25,7 +25,7 @@ jobs:
           version: v3.4.0
 
       - name: Add repo
-        run: helm repo add https://xplorfin.github.io/ngrok-ingress-helm/
+        run: helm repo add xplor https://xplorfin.github.io/ngrok-ingress-helm/
 
       - name: Update dependencies
         run: cd charts/nginx-example && helm dependency update
