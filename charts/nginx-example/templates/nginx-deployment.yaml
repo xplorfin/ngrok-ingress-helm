@@ -18,8 +18,10 @@ spec:
         tag: {{ .Values.image.tag }}
         ports:
         - containerPort: {{ .Values.ports.container }}
+        {{- if .Values.env }}
         env:
           {{- range $key, $val := .Values.env }}
           - name: {{ $key }}
             value: {{ $val }}
           {{- end}}
+        {{- end }}
