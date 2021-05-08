@@ -13,7 +13,7 @@ spec:
         run: nginx
     spec:
       containers:
-      - name: nginx
+      - name: {{ template "ngrok.name" . }}
         image: nginx
         ports:
-        - containerPort: 80
+        - containerPort: {{ .Values.ports.containerPort }}
