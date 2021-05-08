@@ -1,6 +1,6 @@
 dependencies:
 - name: ngrok-ingress
   repository: https://xplorfin.github.io/ngrok-ingress-helm/
-  version: 0.1.6
-digest: sha256:a953cf6d461daef21d9d999ce20667d4819c896756c15d19d8eeede0d31076ed
-generated: "2021-05-08T04:37:26.931164-04:00"
+  version: 0.1.7
+digest: sha256:c3cfe3454f4d61e88084664bcc8ef0c8f5d6151efef6f7a0677ab249f1244b8f
+generated: "2021-05-08T04:44:18.579125-04:00"
