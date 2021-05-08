@@ -1,3 +1,4 @@
+enabled: false # user must enable so this doesn't get activated as a dependency
 image:
   repository: wernight/ngrok
   tag: latest
