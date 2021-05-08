@@ -3,6 +3,22 @@ entries:
   nginx-example:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2021-05-08T08:07:21.434807723Z"
+    dependencies:
+    - condition: ngrok.enabled
+      name: ngrok-ingress
+      repository: https://xplorfin.github.io/ngrok-ingress-helm/
+      version: 0.1.1
+    description: Nginx example demonstrates usage of a helm chart that points to an
+      nginx server
+    digest: 228f077ab559150a7264822690e1220634867d187244e06b23d8dc3ac36f7419
+    name: nginx-example
+    type: application
+    urls:
+    - https://github.com/xplorfin/ngrok-ingress-helm/releases/download/nginx-example-0.1.2/nginx-example-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2021-05-08T07:57:04.676721511Z"
     description: Nginx example demonstrates usage of a helm chart that points to an
       nginx server
@@ -15,6 +31,16 @@ entries:
   ngrok-ingress:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2021-05-08T08:07:21.549404415Z"
+    description: A Helm chart for Kubernetes
+    digest: 8b117b0319ed0f59157e6810abc34ad2fa9b0efb00e65d170a887d5502407a49
+    name: ngrok-ingress
+    type: application
+    urls:
+    - https://github.com/xplorfin/ngrok-ingress-helm/releases/download/ngrok-ingress-0.1.2/ngrok-ingress-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2021-05-08T07:57:04.786929335Z"
     description: A Helm chart for Kubernetes
     digest: e2dc3299969e2021e868811d441bce165cf368bd37fa6b8972c3e66414a33008
@@ -23,4 +49,4 @@ entries:
     urls:
     - https://github.com/xplorfin/ngrok-ingress-helm/releases/download/ngrok-ingress-0.1.1/ngrok-ingress-0.1.1.tgz
     version: 0.1.1
-generated: "2021-05-08T07:57:04.786950535Z"
+generated: "2021-05-08T08:07:21.549414915Z"
