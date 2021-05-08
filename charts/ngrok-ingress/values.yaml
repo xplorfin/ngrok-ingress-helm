@@ -1,6 +1,7 @@
 image:
   repository: wernight/ngrok
   tag: latest
+  pullPolicy: IfNotPresent
 
 ports:
   container: 4040

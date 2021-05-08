@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - name: {{ template "ngrok.name" . }}
-        image: wernight/ngrok
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
         command: ["ngrok"]
         args: ["http", "nginx-service"]
         ports:

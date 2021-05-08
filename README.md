@@ -15,6 +15,7 @@ There's an example in [nginx-example](charts/nginx-examples) using a [requiremen
 |------------------|-------------------------------|------------------------------------------------------------|
 | image.repository | ngrok docker image            | [wernight/ngrok](https://hub.docker.com/r/wernight/ngrok/) |
 | image.tag        | nginx tag                     | latest                                                     |
+| image.pullPolicy | image pull policy             | IfNotPresent                                               |
 | ports.container  | nginx container port          | 4040                                                       |
 | ports.service    | nginx service port            | 4040                                                       |
 | env              | list of enviornment variables | none                                                       |
