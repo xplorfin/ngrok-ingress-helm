@@ -6,5 +6,5 @@ ports:
   container: 80
   service: 80
 
-ngrok:
+ngrok-ingress:
   enabled: true
