@@ -24,8 +24,8 @@ jobs:
         with:
           version: v3.4.0
 
-      # - name: Update dependencies
-      #   run: cd charts/nginx-example && helm dependency update
+      - name: Update dependencies
+        run: cd charts/nginx-example && helm dependency update
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.2.0
