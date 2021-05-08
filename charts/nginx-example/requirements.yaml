@@ -2,4 +2,5 @@ dependencies:
 - name: ngrok-ingress
   version: 0.x.x
   repository: https://xplorfin.github.io/ngrok-ingress-helm/
-  condition: ngrok.enabled
+ngrok-ingress:
+  enabled: false
