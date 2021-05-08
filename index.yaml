@@ -335,6 +335,16 @@ entries:
   ngrok-ingress:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2021-05-08T10:41:19.678305276Z"
+    description: A Helm chart for Kubernetes
+    digest: 5df5ce41cd2f72d23ecca7b9426c82264ce0ec6d2b20de7411fa444c3c735205
+    name: ngrok-ingress
+    type: application
+    urls:
+    - https://github.com/xplorfin/ngrok-ingress-helm/releases/download/ngrok-ingress-0.3.0/ngrok-ingress-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2021-05-08T09:18:33.85609563Z"
     description: A Helm chart for Kubernetes
     digest: 8e5d357647cf6ec593e66c24b0630240c4c10c5cacb5b989d98cf69016041dcd
@@ -453,4 +463,4 @@ entries:
     urls:
     - https://github.com/xplorfin/ngrok-ingress-helm/releases/download/ngrok-ingress-0.1.1/ngrok-ingress-0.1.1.tgz
     version: 0.1.1
-generated: "2021-05-08T09:21:16.852075679Z"
+generated: "2021-05-08T10:41:19.678671989Z"
