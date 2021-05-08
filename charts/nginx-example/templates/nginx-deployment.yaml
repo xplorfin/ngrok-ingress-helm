@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        run: nginx
+        run: {{ template "nginx.name" . }}
     spec:
       containers:
       - name: {{ template "nginx.name" . }}

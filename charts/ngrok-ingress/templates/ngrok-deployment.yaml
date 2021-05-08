@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        app: ngrok
+        app: {{ template "ngrok.name" . }}
     spec:
       containers:
       - name: {{ template "ngrok.name" . }}
