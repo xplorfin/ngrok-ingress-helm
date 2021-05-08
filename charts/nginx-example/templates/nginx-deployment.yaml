@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ template "nginx.name" . }}
+  name: {{ template "nginx.fullname" . }}
 spec:
   selector:
     matchLabels:
-      run: {{ template "nginx.name" . }}
+      run: {{ template "nginx.fullname" . }}
   replicas: 1
   template:
     metadata:
       labels:
-        run: {{ template "nginx.name" . }}
+        run: {{ template "nginx.fullname" . }}
     spec:
       containers:
-      - name: {{ template "nginx.name" . }}
+      - name: {{ template "nginx.fullname" . }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
