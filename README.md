@@ -23,3 +23,9 @@ There's an example in [nginx-example](charts/nginx-examples) using a [requiremen
 ## Enviornment variables
 
 For available enviornment variables, please see the [ngrok container docs](https://hub.docker.com/r/wernight/ngrok/)
+
+## Get the nrok url
+
+*Note: you can get around this by using a constant subdomain via an enviornment variable:
+
+kubectl exec $(kubectl get pods -l=app=nginx-example-ngrok-ingress -o=jsonpath='{.items[0].metadata.name}') -- curl http://localhost:4040/api/tunnels
