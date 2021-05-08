@@ -1,6 +1,6 @@
 apiVersion: v2
-name: ngrok-ingress
-description: A Helm chart for Kubernetes
+name: nginx-example
+description: Nginx example demonstrates usage of a helm chart that points to an nginx server
 
 # A chart can be either an 'application' or a 'library' chart.
 #

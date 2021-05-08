@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: nginx-service
   labels:
-    run: nginx
+    run: { template "nginx.name" . }}
 spec:
   ports:
-  - port: {{ .Values.ports.servicePort }}
+  - port: {{ .Values.ports.service }}
     protocol: TCP
   selector:
-    run: nginx
+    run: { template "nginx.name" . }}

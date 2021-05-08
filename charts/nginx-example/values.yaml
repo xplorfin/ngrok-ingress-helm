@@ -1,0 +1,9 @@
+image:
+  repository: nginx
+  tag: latest
+ports:
+  container: 80
+  service: 80
+
+ngrok:
+  enabled: true

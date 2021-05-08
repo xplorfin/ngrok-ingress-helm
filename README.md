@@ -1,11 +1,24 @@
-Taken from [here](https://github.com/abhirockzz/ngrok-kubernetes)
-
-## Expose Kubernetes services with `ngrok`
-
-Very often, there is a need to expose Kubernetes apps running in [minikube](https://kubernetes.io/docs/setup/minikube/) to the public internet. This post just provides a manual, yet quick and dirty hack for this using [ngrok](https://ngrok.com/).
-
-We'll use a simple [nginx](https://www.nginx.com/) app to test things out i.e. we'll expose an nginx server (running as a single replica Kubernetes Deployment) as a publicly accessible URL.
-
-For details, check out [the blog](https://medium.com/@abhishek1987/expose-kubernetes-services-with-ngrok-65280142dab4)
+# Ngrok Kubernetes Helm Chart
 
 ![](assets/ngrok-k8s.jpg)
+
+This is a modified version of [ngrok-kubernetes](https://github.com/abhirockzz/ngrok-kubernetes) aimed at easily exposing ngrok in local [minikube](https://kubernetes.io/docs/setup/minikube/) clusters. The [original author](https://github.com/abhirockzz) has published a blog post explaining how it works [here](https://medium.com/@abhishek1987/expose-kubernetes-services-with-ngrok-65280142dab4).
+
+# Example
+
+There's an example in [nginx-example](charts/nginx-examples) using a [requirements.yaml](charts/nginx-examples/requirements.yaml) on using the kubernetes provider in another helm chart
+
+
+## Configuration
+
+| Parameter        | Description                   | Default                                                    |
+|------------------|-------------------------------|------------------------------------------------------------|
+| image.repository | ngrok docker image            | [wernight/ngrok](https://hub.docker.com/r/wernight/ngrok/) |
+| image.tag        | nginx tag                     | latest                                                     |
+| ports.container  | nginx container port          | 4040                                                       |
+| ports.service    | nginx service port            | 4040                                                       |
+| env              | list of enviornment variables | none                                                       |
+
+## Enviornment variables
+
+For available enviornment variables, please see the [ngrok container docs](https://hub.docker.com/r/wernight/ngrok/)

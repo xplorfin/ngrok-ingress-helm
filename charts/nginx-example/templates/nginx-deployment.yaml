@@ -1,22 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ template "ngrok.name" . }}
+  name: { template "nginx.name" . }}
 spec:
   selector:
     matchLabels:
-      app: {{ template "ngrok.name" . }}
+      run: nginx
   replicas: 1
   template:
     metadata:
       labels:
-        app: ngrok
+        run: nginx
     spec:
       containers:
-      - name: {{ template "ngrok.name" . }}
-        image: wernight/ngrok
-        command: ["ngrok"]
-        args: ["http", "nginx-service"]
+      - name: {{ template "nginx.name" . }}
+        image: {{ .Values.image.repository }}
+        tag: {{ .Values.image.tag }}
         ports:
         - containerPort: {{ .Values.ports.container }}
         env:
